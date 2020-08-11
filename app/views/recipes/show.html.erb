@@ -1,8 +1,27 @@
 <p id="notice"><%= notice %></p>
 
-<% @recipes.each do |recipe| %>
-  <%= recipe.name %>
-  <br>
-<% end %>
+<div class="recipes">
+  <% @recipes.each do |recipe| %>
+    <div class="recipe">
+      <h4><%= recipe.name %></h4>
+      Temps de préparation/cuisson/total : <br><%= recipe.prep_time %>min / <%= recipe.cook_time %>min / <%= recipe.total_time %>min <br>
+      <%= recipe.budget.capitalize %> / <%= recipe.difficulty.capitalize %> <br>
+      Pour <%= recipe.people_quantity %> personnes <br>
+      Ingredients :
+      <ul>
+        <% recipe.ingredients.each do |ingredient| %>
+          <li><%= ingredient.name %></li>
+        <% end %>
+      </ul>
+      <br>
+      Recette par <%= recipe.author.name %><br>
+      Note : <%= recipe.rate %>/5
+      <br><br>
+      Tags: <%= recipe.tags.pluck(:name).join(', ') %>
+    </div>
+  <% end %>
+</div>
 
+
+<br>
 <%= link_to 'Back', root_path %>

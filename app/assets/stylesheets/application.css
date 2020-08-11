@@ -13,3 +13,41 @@
  *= require_tree .
  *= require_self
  */
+
+body {
+  padding: 0 1%
+}
+
+input[type=text] {
+  width: 50%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  display: block;
+}
+
+.recipes {
+  text-align: center;
+}
+
+.recipe {
+  width: 25%;
+  border: 1px solid;
+  border-radius: 10px;
+  display: inline-block;
+  padding: 1% 1%;
+  margin: 10px;
+  text-align: left;
+  vertical-align: top;
+}
+@media screen and (max-width: 1000px) {
+  .recipe {
+    width: 40%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .recipe {
+    width: 80%;
+  }
+}
