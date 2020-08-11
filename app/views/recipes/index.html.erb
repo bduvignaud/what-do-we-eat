@@ -1,0 +1,18 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Recipes</h1>
+
+<table>
+  <tbody>
+    Ingredients:
+
+    <%= form_tag show_path, method: :get do %>
+      <%= text_field_tag("ingredient[]") %>
+      <%= text_field_tag("ingredient[]") %>
+      <%= text_field_tag("ingredient[]") %>
+       <%= submit_tag 'Chercher' %>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
