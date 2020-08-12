@@ -1,6 +1,9 @@
 <p id="notice"><%= notice %></p>
 
 <div class="recipes">
+  <% if @recipes.empty? %>
+    <span class="no_recipes">Désolé nous n'avons pas trouvé de recettes :(</span>
+  <% end  %>
   <% @recipes.each do |recipe| %>
     <div class="recipe">
       <h4><%= recipe.name %></h4>

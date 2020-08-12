@@ -15,7 +15,8 @@
  */
 
 body {
-  padding: 0 1%
+  padding: 0 1%;
+  font-family: Helvetica;
 }
 
 input[type=text] {
@@ -23,6 +24,11 @@ input[type=text] {
   padding: 12px 20px;
   margin: 8px 0;
   box-sizing: border-box;
+  display: block;
+}
+
+select {
+  margin-bottom: 25px;
   display: block;
 }
 
