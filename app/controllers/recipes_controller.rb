@@ -14,8 +14,9 @@ class RecipesController < ApplicationController
       @recipes = @recipes.where(people_quantity: params['people'])
     end
 
-    if params['tag'].present?
-      @recipes = @recipes.search_by_tag(params['tag'])
+    if params['tag'].reject(&:empty?).present?
+      tags = params['tag'].join(" ")
+      @recipes = @recipes.search_by_tag(tags)
     end
   end
 end

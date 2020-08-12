@@ -27,8 +27,14 @@ input[type=text] {
   display: block;
 }
 
+input[type=submit] {
+  margin-top: 25px;
+  display: block;
+}
+
 form div {
   margin-top: 20px;
+  display: block;
 }
 
 select {

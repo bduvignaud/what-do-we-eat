@@ -10,17 +10,18 @@
   <%= text_field_tag("ingredient[]") %>
 </div>
 
-  <%= link_to 'Ajouter un ingrédient', '#', id: 'add_ingredient', onclick: 'addFields()', remote: true %>
+  <%= link_to 'Ajouter un ingrédient', '#', id: 'add_ingredient', onclick: 'addIngredients()', remote: true %>
 
-<div class="people">
+<div id="people">
   <%= label_tag 'Nombre de personnes' %>
   <%= select_tag "people", options_for_select(@people_quantity), include_blank: true %>
 </div>
 
-<div class="tags">
+<div id="tags">
   <%= label_tag 'Affiner ma recherce' %>
-  <%=  autocomplete_field_tag 'tag', '', autocomplete_tag_name_recipes_path %>
+  <%=  autocomplete_field_tag 'tag[]', '', autocomplete_tag_name_recipes_path %>
 </div>
+  <%= link_to 'Ajouter un tag', '#', id: 'add_tag', onclick: 'addTags()', remote: true %>
 
   <%= submit_tag 'Chercher' %>
 <% end %>
