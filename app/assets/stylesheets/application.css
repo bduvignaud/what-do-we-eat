@@ -21,15 +21,23 @@ body {
 
 input[type=text] {
   width: 50%;
-  padding: 12px 20px;
+  padding: 12px 12px;
   margin: 8px 0;
   box-sizing: border-box;
   display: block;
 }
 
+form div {
+  margin-top: 20px;
+}
+
 select {
-  margin-bottom: 25px;
+  margin: 8px 0 25px 0;
   display: block;
+}
+
+a, a:visited, a:hover, a:active {
+  color: #4771ba;
 }
 
 .recipes {
