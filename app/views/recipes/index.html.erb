@@ -2,7 +2,7 @@
 
 <h1>Qu'est ce qu'on mange ?</h1>
 
-<%= form_tag show_path, method: :get do %>
+<%= form_tag recipes_path, method: :get do %>
   <h4>Ingredients:</h4>
   <%= text_field_tag("ingredient[]", nil, required: true)  %>
   <%= text_field_tag("ingredient[]") %>
@@ -12,7 +12,7 @@
   <%= select_tag "people", options_for_select(@people_quantity), include_blank: true %>
 
   <h5>Affiner ma recherche</h5>
-  <%= text_field_tag("tag") %>
+  <%=  autocomplete_field_tag 'tag', '', autocomplete_tag_name_recipes_path %>
 
   <%= submit_tag 'Chercher' %>
 <% end %>

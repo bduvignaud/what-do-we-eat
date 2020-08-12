@@ -1,4 +1,6 @@
 class RecipesController < ApplicationController
+  autocomplete :tag, :name
+
   def index
     @people_quantity = Recipe.pluck(:people_quantity).uniq.compact.sort
   end
