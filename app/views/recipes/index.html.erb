@@ -11,6 +11,9 @@
   <h4>Nombre de personnes</h4>
   <%= select_tag "people", options_for_select(@people_quantity), include_blank: true %>
 
+  <h5>Affiner ma recherche</h5>
+  <%= text_field_tag("tag") %>
+
   <%= submit_tag 'Chercher' %>
 <% end %>
 

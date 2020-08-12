@@ -8,4 +8,8 @@ class Recipe < ApplicationRecord
   pg_search_scope :search_by_ingredient, associated_against: {
     ingredients: :name
   }
+
+  pg_search_scope :search_by_tag, associated_against: {
+    tags: :name
+  }
 end

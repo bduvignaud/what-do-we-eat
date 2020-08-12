@@ -11,5 +11,9 @@ class RecipesController < ApplicationController
     if params['people'].present?
       @recipes = @recipes.where(people_quantity: params['people'])
     end
+
+    if params['tag'].present?
+      @recipes = @recipes.search_by_tag(params['tag'])
+    end
   end
 end
