@@ -18,7 +18,7 @@
 </div>
 
 <div id="tags">
-  <%= label_tag 'Affiner ma recherce' %>
+  <%= label_tag 'Affiner ma recherche' %>
   <%=  autocomplete_field_tag 'tag[]', '', autocomplete_tag_name_recipes_path %>
 </div>
   <%= link_to 'Ajouter un tag', '#', id: 'add_tag', onclick: 'addTags()', remote: true %>
