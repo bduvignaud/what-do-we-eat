@@ -1,12 +1,16 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Recipes</h1>
-<h3>Ingredients:</h3>
+<h1>Qu'est ce qu'on mange ?</h1>
 
 <%= form_tag show_path, method: :get do %>
+  <h4>Ingredients:</h4>
+  <%= text_field_tag("ingredient[]", nil, required: true)  %>
   <%= text_field_tag("ingredient[]") %>
   <%= text_field_tag("ingredient[]") %>
-  <%= text_field_tag("ingredient[]") %>
+
+  <h4>Nombre de personnes</h4>
+  <%= select_tag "people", options_for_select(@people_quantity), include_blank: true %>
+
   <%= submit_tag 'Chercher' %>
 <% end %>
 
